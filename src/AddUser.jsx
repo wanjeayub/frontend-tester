@@ -9,7 +9,7 @@ const AddUser = () => {
     // e.preventDefault();
     try {
       const response = await fetch(
-        "https://backend-tester-1.onrender.com/api/users",
+        "https://mfinance-y86pyz63.b4a.run/api/users",
         {
           method: "POST",
           headers: {
