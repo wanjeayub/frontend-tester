@@ -10,7 +10,9 @@ const UserList = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/users");
+        const response = await fetch(
+          "https://backend-tester-8bh5.onrender.com/api/users"
+        );
         const data = await response.json();
         setUsers(data);
       } catch (error) {
@@ -24,7 +26,7 @@ const UserList = () => {
   // Handle delete user
   const deleteUser = async (id) => {
     try {
-      await fetch(`http://localhost:5000/api/users/${id}`, {
+      await fetch(`https://backend-tester-8bh5.onrender.com/api/users/${id}`, {
         method: "DELETE",
       });
       setUsers(users.filter((user) => user._id !== id));
@@ -40,7 +42,7 @@ const UserList = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `http://localhost:5000/api/users/${isEditing}`,
+        `https://backend-tester-8bh5.onrender.com/api/users/${isEditing}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
