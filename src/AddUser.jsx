@@ -49,7 +49,7 @@ const AddUser = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700">Amount</label>
+            <label className="block text-gray-700">Principal</label>
             <input
               type="number"
               className="w-full px-3 py-2 border rounded"
