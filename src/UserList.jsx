@@ -11,7 +11,7 @@ const UserList = () => {
     const fetchUsers = async () => {
       try {
         const response = await fetch(
-          "https://backend-tester-8bh5.onrender.com/api/users"
+          "https://backend-tester-1.onrender.com/api/users"
         );
         const data = await response.json();
         setUsers(data);
@@ -26,7 +26,7 @@ const UserList = () => {
   // Handle delete user
   const deleteUser = async (id) => {
     try {
-      await fetch(`https://backend-tester-8bh5.onrender.com/api/users/${id}`, {
+      await fetch(`https://backend-tester-1.onrender.com/api/users/${id}`, {
         method: "DELETE",
       });
       setUsers(users.filter((user) => user._id !== id));
@@ -42,7 +42,7 @@ const UserList = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `https://backend-tester-8bh5.onrender.com/api/users/${isEditing}`,
+        `https://backend-tester-1.onrender.com/${isEditing}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
