@@ -28,8 +28,7 @@ const AddUser = () => {
         throw new Error("Failed to add user");
       }
     } catch (error) {
-      console.error("There was an error adding the user:", error);
-      alert("Error adding user");
+      console.log(error);
     }
   };
 
