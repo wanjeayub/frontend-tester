@@ -18,9 +18,9 @@ const AddUser = () => {
           body: JSON.stringify({ fullName, amount }),
         }
       );
+      const data = await response.json();
 
       if (response.ok) {
-        const data = await response.json();
         alert(data.message);
         setFullName("");
         setAmount("");
